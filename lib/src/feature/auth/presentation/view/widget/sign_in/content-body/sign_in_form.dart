@@ -16,7 +16,7 @@ class SignInForm extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(
-          height: 44.0,
+          height: 56.0,
           child: TextFormField(
             style: const TextStyle(fontSize: 12.0, color: Colors.white),
             decoration: authInputDecoration('register_user'.i18n().toUpperCase(), (!state.status && state.username == "")),
@@ -26,7 +26,7 @@ class SignInForm extends StatelessWidget {
         ),
         const SizedBox(height: 16.0),
         SizedBox(
-          height: 44.0,
+          height: 56.0,
           child: TextFormField(
             style: const TextStyle(fontSize: 12.0, color: Colors.white),
             obscureText: true,

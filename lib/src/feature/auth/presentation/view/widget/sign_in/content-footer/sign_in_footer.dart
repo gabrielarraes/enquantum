@@ -1,3 +1,4 @@
+import 'package:enquantum/src/feature/auth/presentation/view/widget/sign_in/content-footer/sign_in_register_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:enquantum/src/feature/auth/presentation/view/widget/sign_in/content-footer/create_account_navigator.dart';
@@ -16,7 +17,7 @@ class SignInFooter extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children:  const [
             SignInButton(),
-            CreateAccountNavigator(),
+            SignInRegisterButton(),
           ],
         );
       },

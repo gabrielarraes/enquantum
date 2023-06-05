@@ -20,7 +20,7 @@ class SignInPage extends StatelessWidget {
         child: Container(
           decoration: authBackgroundDecoration(),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 6.0),
+            padding: const EdgeInsets.symmetric(horizontal: 45.0),
             child: CustomScrollView(
               slivers: [
                 SliverFillRemaining(
@@ -29,8 +29,8 @@ class SignInPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Expanded(flex: 3, child: AuthPageHeader(subTitle: "sign_in_welcome".i18n(), isNotSignPage: false,)),
-                      Expanded(flex: 7, child: SignInContentWrapper())
+                      Expanded(flex: 4, child: AuthPageHeader(subTitle: "sign_in_welcome".i18n(), isNotSignPage: false,)),
+                      const Expanded(flex: 6, child: SignInContentWrapper())
                     ]
                   ),
                 ),

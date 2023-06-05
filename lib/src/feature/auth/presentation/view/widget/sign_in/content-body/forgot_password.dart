@@ -11,12 +11,17 @@ class ForgotPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 12.0),
-      child: InkWell(
-        onTap: () => Modular.to.navigate('/auth/reset-password'),
-        child: GestureDetector(
-          child: Text("reset_password_forgot_question".i18n(), style: TextStyle(color: Colors.white))
-        )
-      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          InkWell(
+            onTap: () => Modular.to.navigate('/auth/reset-password'),
+            child: GestureDetector(
+              child: Text("reset_password_forgot_question".i18n(), style: const TextStyle(color: Colors.black))
+            )
+          ),
+        ],
+      )
     );
   }
 }

@@ -15,7 +15,7 @@ class SignInContentWrapper extends StatelessWidget {
     child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: const [
-        SignInHeader(),
+        //SignInHeader(),
         SignInForm(),
         SignInFooter()
       ],
