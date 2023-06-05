@@ -1,0 +1,31 @@
+{
+  "app_name": "Task Forge",
+
+  "send": "Send",
+  "welcome": "Welcome!",
+
+  "register_user": "Username",
+  "register_email": "Email",
+  "register_password": "Password",
+  "register_sign_up": "Sign up",
+  "register_create_account": "Create account",
+  "register_create_dont_have_account": "Don't have an account?",
+
+  "reset_password_forgot_password": "I Forgot my Password",
+  "reset_password_email_sent": "Email Sent",
+  "reset_password_email_arravied": "If email arravied in your email, click for redirect to reset passord screen.",
+  "reset_password_forgot_question": "Forgot your Password?",
+  "reset_password_put_email": "Put your email account, and will be send a message with validation link to change passsword.",
+
+  "sign_in_welcome": "You're welcome!",
+  "sign_in": "Sign In",
+
+  "onboard_welcome": "Welcome to TaskForge!",
+  "onboard_welcome_description": "TaskForge is designed to streamline your project management process and help you stay organized.",
+
+  "onboard_welcome_task_management": "Task Management",
+  "onboard_welcome_task_management_description": " Create, assign, and track tasks effortlessly. Stay on top of deadlines and monitor progress with ease.",
+
+  "onboard_welcome_agile": "Agile Boards",
+  "onboard_welcome_agile_description": "Visualize your workflow and streamline your team's work using customizable agile boards. Move tasks across different stages effortlessly."
+}

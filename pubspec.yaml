@@ -1,0 +1,49 @@
+name: enquantum
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+    
+  flutter_secure_storage: ^8.0.0
+
+  flutter_bloc:
+  equatable: ^2.0.5
+  cached_network_image: ^3.2.3
+  glassmorphism: ^3.0.0
+
+  flutter_localizations:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_modular: ^5.0.3
+  brasil_fields: ^1.9.0
+  localization: ^2.1.0
+  flutter_svg_provider: ^1.0.3
+  flutter_triple: ^1.2.7+4
+  dio: ^5.1.0
+  provider: ^6.0.5
+  http: ^0.13.5
+  shared_preferences: ^2.0.12
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - lib/assets/
+    - lib/assets/i18n/
+    - lib/assets/images/
+    - lib/assets/images/auth/
+    - lib/assets/images/onboard/
