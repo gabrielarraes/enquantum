@@ -20,15 +20,17 @@ class AuthPageHeader extends StatelessWidget {
             child: const Icon(Icons.arrow_back, size: 24.0),
           ),
       ),
-      Center(
+      const Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [ 
+          children: [ 
             Padding(
               padding: EdgeInsets.only(right: 12.0),
               child: Text("Enquantum", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.black))
             ),
+            SizedBox(height: 64),
+            Image(image: AssetImage('lib/assets/images/auth/auth-img.png')),
           ],
         ),
       ),

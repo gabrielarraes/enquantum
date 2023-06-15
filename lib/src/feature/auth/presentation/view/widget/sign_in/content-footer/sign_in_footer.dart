@@ -13,9 +13,9 @@ class SignInFooter extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<SignInCubit, SignInState>(
       builder: (context, state) {
-        return Column(
+        return const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children:  const [
+          children: [
             SignInButton(),
             SignInRegisterButton(),
           ],

@@ -19,8 +19,14 @@ class RegisterPage extends StatelessWidget {
       child: Center(
         child: SafeArea(
           child: Center(
-            child: Container(
-              decoration: authBackgroundDecoration(),
+            child: ConstrainedBox(
+              constraints: BoxConstraints(
+                minHeight: 5.0,
+                minWidth: 5.0,
+                maxHeight: MediaQuery.of(context).size.height,
+                maxWidth: 30.0,
+              ),
+              //decoration: authBackgroundDecoration(),
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(8.0, 40.0, 8.0, 60.0),
                 child: Column(
@@ -36,8 +42,8 @@ class RegisterPage extends StatelessWidget {
                               BlocBuilder<RegisterCubit, RegisterState>(
                                 builder: (context, state) =>
                                   TextFormField(
-                                  cursorColor: Colors.white,
-                                  style: const TextStyle(color: Colors.white),
+                                  cursorColor: Colors.black,
+                                  style: const TextStyle(color: Colors.black),
                                   decoration: authInputDecoration('register_user'.i18n(), false),
                                   onChanged: (username) => context.read<RegisterCubit>().usernameChanges(username),
                                 ),
@@ -52,8 +58,8 @@ class RegisterPage extends StatelessWidget {
                               BlocBuilder<RegisterCubit, RegisterState>(
                                 builder: (context, state) =>
                                   TextFormField(
-                                  cursorColor: Colors.white,
-                                  style: const TextStyle(color: Colors.white),
+                                  cursorColor: Colors.black,
+                                  style: const TextStyle(color: Colors.black),
                                   decoration: authInputDecoration('register_email'.i18n(), false),
                                   onChanged: (email) => context.read<RegisterCubit>().emailChanges(email),
                                 ),
@@ -68,8 +74,8 @@ class RegisterPage extends StatelessWidget {
                               BlocBuilder<RegisterCubit, RegisterState>(
                                 builder: (context, state) =>
                                   TextFormField(
-                                  cursorColor: Colors.white,
-                                  style: const TextStyle(color: Colors.white),
+                                  cursorColor: Colors.black,
+                                  style: const TextStyle(color: Colors.black),
                                   obscureText: true,
                                   decoration: authInputDecoration('register_password'.i18n(), false),
                                   onChanged: (password) => context.read<RegisterCubit>().passwordChanges(password),

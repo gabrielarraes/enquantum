@@ -12,17 +12,17 @@ class SignInRegisterButton extends StatelessWidget {
     padding: const EdgeInsets.only(bottom: 24),
     child: ElevatedButton(
       style: ElevatedButton.styleFrom(
-        minimumSize: const Size.fromHeight(45),
+        minimumSize: const Size.fromHeight(50),
         shape: RoundedRectangleBorder(
-          side: BorderSide(color: Colors.black ),
-          borderRadius: BorderRadius.circular(16)
+          side: const BorderSide(color: Colors.black ),
+          borderRadius: BorderRadius.circular(24)
         ),
         backgroundColor: Colors.white//side: const BorderSide(color: Colors.white, width: 1),
       ),
       onPressed: () => context.read<SignInCubit>().signIn(),
-      child: Text(
-        "sign_in".i18n(),
-        style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700),
+      child: const Text(
+        "Cadastrar",
+        style: TextStyle(color: Color(0xFF6750A4), fontWeight: FontWeight.w700),
       )
     )
   );

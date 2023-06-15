@@ -10,12 +10,11 @@ class SignInContentWrapper extends StatelessWidget {
   const SignInContentWrapper({super.key});
 
   @override
-  Widget build(BuildContext context) => Padding(
-    padding: const EdgeInsets.symmetric(vertical: 42.0, horizontal: 8.0),
+  Widget build(BuildContext context) => const Padding(
+    padding: EdgeInsets.symmetric(vertical: 42.0, horizontal: 8.0),
     child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: const [
-        //SignInHeader(),
+      children: [
         SignInForm(),
         SignInFooter()
       ],

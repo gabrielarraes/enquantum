@@ -18,9 +18,9 @@ class SignInForm extends StatelessWidget {
         SizedBox(
           height: 56.0,
           child: TextFormField(
-            style: const TextStyle(fontSize: 12.0, color: Colors.white),
+            style: const TextStyle(fontSize: 12.0, color: Colors.black),
             decoration: authInputDecoration('register_user'.i18n().toUpperCase(), (!state.status && state.username == "")),
-            cursorColor: Colors.white,
+            cursorColor: Colors.black,
             onChanged: (username) => context.read<SignInCubit>().usernameChanges(username),
           ),
         ),
@@ -28,14 +28,15 @@ class SignInForm extends StatelessWidget {
         SizedBox(
           height: 56.0,
           child: TextFormField(
-            style: const TextStyle(fontSize: 12.0, color: Colors.white),
+            style: const TextStyle(fontSize: 12.0, color: Colors.black),
             obscureText: true,
-            cursorColor: Colors.white,
+            cursorColor: Colors.black,
             decoration: authInputDecoration('register_password'.i18n().toUpperCase(), (!state.status && state.password == "")),
             onChanged: (password) => context.read<SignInCubit>().passwordChanges(password),
           ),
         ),
-        const ForgotPassword()
+        const ForgotPassword(),
+        const SizedBox(height: 48.0),
       ],
     )
   );

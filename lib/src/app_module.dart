@@ -4,6 +4,7 @@ import 'package:enquantum/src/common/integration/client/app_http_client.dart';
 import 'package:enquantum/src/feature/auth/auth_module.dart';
 import 'package:enquantum/src/feature/home/home_module.dart';
 import 'package:enquantum/src/feature/onboard/onboard_module.dart';
+import 'package:enquantum/src/feature/program_content/program_content_module.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
@@ -19,6 +20,7 @@ class AppModule extends Module {
   List<ModularRoute> get routes => [
     ModuleRoute(Modular.initialRoute, module: OnboardModule()),
     ModuleRoute("/auth", module: AuthModule()),
-    ModuleRoute("/home", module: HomeModule(), guards: [AuthGuard()]),
+    ModuleRoute("/home", module: HomeModule()),
+    ModuleRoute("/programs", module: ProgramContentModule())//guards: [AuthGuard()]
   ];
 }

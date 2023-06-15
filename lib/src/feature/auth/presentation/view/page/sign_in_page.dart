@@ -17,26 +17,24 @@ class SignInPage extends StatelessWidget {
     body: BlocProvider(
       create: (context) => SignInCubit(),
       child: SafeArea(
-        child: Container(
-          decoration: authBackgroundDecoration(),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 45.0),
-            child: CustomScrollView(
-              slivers: [
-                SliverFillRemaining(
-                  hasScrollBody: false,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Expanded(flex: 4, child: AuthPageHeader(subTitle: "sign_in_welcome".i18n(), isNotSignPage: false,)),
-                      const Expanded(flex: 6, child: SignInContentWrapper())
-                    ]
-                  ),
-                ),
-              ],
-            )
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(context).size.height,
           ),
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 45.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  AuthPageHeader(subTitle: "sign_in_welcome".i18n(), isNotSignPage: false,),
+                  const SizedBox(height: 32.0),
+                  const SignInContentWrapper()
+                ]
+              ),
+            ),
+          )
         )
       ),
     )
