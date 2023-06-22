@@ -22,7 +22,7 @@ class SubjectPage extends StatelessWidget {
         child: Column(
           children: [
             GestureDetector(
-              onTap: () => Modular.to.navigate('/programs/1/1'),
+              onTap: () => Modular.to.navigate('$subjectId/program-content/movimento-circular'),
               child: const SubjectCard(imgPath: 'lib/assets/images/feature/moviment.png', text: 'Movimento Circular Uniforme',)
             ),
             const SizedBox(height: 16.0),

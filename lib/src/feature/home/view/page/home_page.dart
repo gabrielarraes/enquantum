@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Text("Àreas de estudo"),
         actions: [
           Container(
             margin: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 20.0),
