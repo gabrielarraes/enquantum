@@ -32,7 +32,7 @@ class SubjectPage extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             GestureDetector(
-              onTap: () => Modular.to.navigate('/programs/3'),
+              onTap: () => Modular.to.navigate('$subjectId/program-content/pendulo'),
               child: const SubjectCard(imgPath: 'lib/assets/images/feature/graph.png', text: 'Movimento Harmônico Simples',)
             ),
           ],
