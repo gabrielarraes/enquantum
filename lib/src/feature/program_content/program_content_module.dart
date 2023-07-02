@@ -11,11 +11,19 @@ class ProgramContentModule extends Module {
   @override
   List<ModularRoute> get routes => [
     ChildRoute("/:subjectId", child: (context, args) => SubjectPage(subjectId: int.parse(args.params['subjectId']))),
+    ChildRoute("/:subjectId/program-content/movimento-circular",
+      child:(context, args) => ProgramContentWidget(
+        subjectId: int.parse(args.params['subjectId']),
+        content: const CircularMovimentContent(),
+        simulation: const CircularMovimentSimulation(),
+        title: 'Movimento Harmônico Simples',
+      )
+    ),
     ChildRoute("/:subjectId/program-content/pendulo",
       child:(context, args) => ProgramContentWidget(
         subjectId: int.parse(args.params['subjectId']),
-        content: PenduloContent(),
-        simulation: PenduloSimulation(),
+        content: const PenduloContent(),
+        simulation: const PenduloSimulation(),
         title: 'Movimento Harmônico Simples',
       )
     ),
