@@ -10,7 +10,7 @@ import 'common/widget/navigation-icon.dart';
 class ProgramContentWidget extends StatelessWidget {
 
   final AbstractContent content;
-  final AbstractSimulation simulation;
+  final dynamic simulation;
   final String title;
   final int subjectId;
 

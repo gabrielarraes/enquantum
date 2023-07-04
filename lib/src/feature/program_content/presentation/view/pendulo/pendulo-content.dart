@@ -23,16 +23,16 @@ class PenduloContent extends AbstractContent {
         descriptionText(PENDULO_DESCRIPTION, 16),
 
         descriptionText(PENDULO_DESCRIPTION_2, null),
-        const TeXViewDocument(r""" <p> $$Fr = { -m * g * sin(θ) }$$</p> """),
+        const TeXViewDocument(r""" <p>$$Fr = { -m * g * sin(θ) }$$</p> """),
 
         descriptionText(PENDULO_DESCRIPTION_3, null),
-        const TeXViewDocument(r""" <p> $$a = { -gθ }$$</p> """),
+        const TeXViewDocument(r""" <p>$$a = { { d^2θ \over dt^2  } = -gθ }$$</p> """),
 
         descriptionText(PENDULO_DESCRIPTION_4, null),
-        const TeXViewDocument(r""" <p> $$θ = { θ_0 * cos(ω t) }$$</p> """),
+        const TeXViewDocument(r""" <p>$$θ = { θ_0 * cos(ω t) }$$</p> """),
 
         descriptionText(PENDULO_DESCRIPTION_5, null),
-        const TeXViewDocument(r""" <p style="align-self: start">$$ω = { \sqrt { g \over l } }.$$</p> """),
+        const TeXViewDocument(r""" <p>$$ω = { \sqrt { g \over l } }.$$</p> """),
 
         descriptionText(PENDULO_DESCRIPTION_6, null),
         const TeXViewDocument(r""" <p>$$T = { 2 * π \sqrt { l \over g } }.$$</p> """),

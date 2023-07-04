@@ -25,9 +25,6 @@ class CircularMovimentContent extends AbstractContent {
         descriptionText(CIRCULAR_MOVIMENT_DESCRIPTION_4, null),
         const TeXViewDocument(r""" <p style="align-self: start">$$ΔS = { 2 * π * R }.$$</p> """),
 
-        descriptionText(CIRCULAR_MOVIMENT_DESCRIPTION_5, null),
-        const TeXViewDocument(r""" <p>$$T = { 2 * π \sqrt { l \over g } }.$$</p> """),
-
         descriptionText(CIRCULAR_MOVIMENT_DESCRIPTION_6, 16),
         descriptionText(CIRCULAR_MOVIMENT_DESCRIPTION_7, null),
         const TeXViewDocument(r""" <p>$$V = { {ΔS \over ΔT} = {2 * π * R \over T} = { 2 * π * R * f } }$$  </p> """),

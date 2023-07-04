@@ -12,9 +12,8 @@ class SubjectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      title: const Center(
-        child: Text("Modulo"),
-      )
+      backgroundColor: Colors.deepPurple,
+      title: const Center(child: Text("Modulo"))
     ),
     body: SafeArea(
       child: Padding(
