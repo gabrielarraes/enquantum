@@ -1,3 +1,5 @@
+import 'package:enquantum/src/feature/program_content/presentation/view/movimento-circular-variado/movimento-circular-variado-content.dart';
+import 'package:enquantum/src/feature/program_content/presentation/view/movimento-circular-variado/movimento-circular-variado-simulation.dart';
 import 'package:enquantum/src/feature/program_content/presentation/view/movimento-circular/circular-moviment-content.dart';
 import 'package:enquantum/src/feature/program_content/presentation/view/movimento-circular/circular-moviment-simulation.dart';
 import 'package:enquantum/src/feature/program_content/presentation/view/pendulo/pendulo-content.dart';
@@ -17,6 +19,14 @@ class ProgramContentModule extends Module {
         content: const CircularMovimentContent(),
         simulation: const CircularMovimentSimulation(),
         title: 'Movimento Circular',
+      )
+    ),
+    ChildRoute("/:subjectId/program-content/movimento-circular-variado",
+      child:(context, args) => ProgramContentWidget(
+        subjectId: int.parse(args.params['subjectId']),
+        content: MovimentoCircularVariadoContent(),
+        simulation: MovimentoCircularVariadoSimulation(),
+        title: 'Movimento Circular Uniformemente Variado',
       )
     ),
     ChildRoute("/:subjectId/program-content/pendulo",

@@ -34,7 +34,7 @@ class SubjectPage extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             GestureDetector(
-              onTap: () => Modular.to.navigate('/programs/2'),
+              onTap: () => Modular.to.navigate('$subjectId/program-content/movimento-circular-variado'),
               child: const SubjectCard(imgPath: 'lib/assets/images/feature/moviment.png', text: 'Movimento Cicular Uniformemente Variado',)
             ),
             const SizedBox(height: 16.0),
