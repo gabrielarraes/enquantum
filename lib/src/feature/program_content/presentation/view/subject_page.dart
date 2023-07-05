@@ -11,9 +11,17 @@ class SubjectPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
+      appBar: AppBar(
       backgroundColor: Colors.deepPurple,
-      title: const Center(child: Text("Modulo"))
+      title: Row(
+        children: [
+          InkWell(
+            onTap: () => Modular.to.navigate('/home/'),
+            child: Icon(Icons.arrow_back),
+          ),
+          Expanded(child: Center(child: Text('Módulos')))
+        ]
+      ),
     ),
     body: SafeArea(
       child: Padding(
