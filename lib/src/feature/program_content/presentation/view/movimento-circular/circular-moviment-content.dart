@@ -6,7 +6,7 @@ import 'package:flutter_tex/flutter_tex.dart';
 import '../common/style/content-document-style.dart';
 import '../common/tex-view/content-description-text.dart';
 
-class CircularMovimentContent extends AbstractContent {
+class CircularMovimentContent extends StatelessWidget implements AbstractContent {
   const CircularMovimentContent({super.key});
 
   @override

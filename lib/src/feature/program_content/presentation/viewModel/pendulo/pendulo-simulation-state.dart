@@ -6,6 +6,7 @@ import 'package:equatable/equatable.dart';
 class PenduloSimulationState extends Equatable {
   Offset center = Offset.zero;
   double angle;
+  double angleInit;
   double comprimento;
   double velocityInit;
   Timer? timer;
@@ -13,7 +14,7 @@ class PenduloSimulationState extends Equatable {
   double time;
   double initialAngle;
   Offset position;
-
+  bool isRunning;
   //late Timer timerGlobal;
   //final frequencyControler = TextEditingController();
 
@@ -26,7 +27,9 @@ class PenduloSimulationState extends Equatable {
     this.timer,
     this.aceleracaoGravitacional = 10,
     this.time = 0,
-    this.position = Offset.zero
+    this.position = Offset.zero,
+    this.angleInit = 0.5,
+    this.isRunning = false
   });
 
   PenduloSimulationState copyWith({
@@ -38,9 +41,13 @@ class PenduloSimulationState extends Equatable {
     double? time,
     double? initialAngle,
     double? aceleracaoGravitacional,
-    Offset? position
+    Offset? position,
+    double? angleInit,
+    bool? isRunning
   }) {
     return PenduloSimulationState(
+      isRunning: isRunning ?? this.isRunning,
+      angleInit: angleInit ?? this.angleInit,
       center: center ?? this.center,
       time: time ?? this.time,
       position: position ?? this.position,
@@ -54,5 +61,7 @@ class PenduloSimulationState extends Equatable {
   }
 
   @override
-  List<Object> get props => [center, angle, comprimento, velocityInit, aceleracaoGravitacional, time];
+  List<Object> get props => [
+    center, angle, comprimento, velocityInit, aceleracaoGravitacional, time, angleInit, position, isRunning
+  ];
 }

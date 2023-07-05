@@ -6,7 +6,7 @@ import '../common/tex-view/content-description-text.dart';
 import '../common/style/content-document-style.dart';
 import 'constants.dart';
 
-class PenduloContent extends AbstractContent {
+class PenduloContent extends StatelessWidget implements AbstractContent {
   final TeXViewRenderingEngine renderingEngine;
 
   const PenduloContent({

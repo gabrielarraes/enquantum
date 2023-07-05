@@ -23,7 +23,7 @@ class ProgramContentModule extends Module {
       child:(context, args) => ProgramContentWidget(
         subjectId: int.parse(args.params['subjectId']),
         content: const PenduloContent(),
-        simulation: const PenduloSimulation(),
+        simulation: PenduloSimulation(),
         title: 'Movimento Harmônico Simples',
       )
     ),

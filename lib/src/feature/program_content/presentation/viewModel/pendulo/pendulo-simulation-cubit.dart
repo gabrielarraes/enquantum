@@ -10,32 +10,69 @@ import '../../domain/usecase/calculator.dart';
 class PenduloSimulationCubit extends Cubit<PenduloSimulationState> {
   PenduloSimulationCubit() : super(PenduloSimulationState());
 
-  // void tabChanges(int index) {
-  //   emit(state.copyWith(tab: index));
-  // }
-
-  void setTimer() {
-    final timerGlobal = Timer.periodic(Duration(milliseconds: 50),(Timer t) {
-      //setState(() {
-        // Calculator2 calc2 = Calculator2(comprimento, angle);
-        //
-        // //calculaVelocidade calulo3 = calculaVelocidade(angleInit, comprimento, time, aceleracaoGravitacional);
-        setAngle(CalculateAngle(state.angle, state.comprimento, state.time, state.aceleracaoGravitacional));
-        CalculatePosition(state.comprimento, state.angle);
-        // print('abc');
-        //
-        // position = calc2.positionCircumferential();
-        // position = calc2.positionCircumferential();
-        accrescentTime(0.25);
-        // time += 0.25;
-      //});
-
-      // Chama a si mesmo noR
-    });
+  void execute(double width,double height) {
+    emit(state.copyWith(center: Offset(width, height)));
   }
 
-  void setPosition(Offset position) {
-    emit(state.copyWith(position: position));
+  void initTimer() {
+    if(state.isRunning) {
+      return;
+    }
+
+    emit(state.copyWith(
+      isRunning: true,
+      timer: Timer.periodic(const Duration(milliseconds: 50), (Timer t) {
+        setAngle(CalculateAngle(state.angleInit, state.comprimento, state.time, state.aceleracaoGravitacional));
+        setPosition(CalculatePosition(state.comprimento, state.angle));
+        accrescentTime(0.25);
+      })
+    ));
+  }
+
+  void disposeTimer() {
+    if(state.timer != null) {
+      state.timer!.cancel();
+      emit(state.copyWith(timer: null, isRunning: false));
+    }
+  }
+
+  void reset() {
+    if(state.timer != null) {
+      state.timer!.cancel();
+    }
+
+    emit(
+      state.copyWith(
+        angleInit: 0.5,
+        angle: 0.5,
+        comprimento: 100,
+        velocityInit: 0,
+        aceleracaoGravitacional: 10,
+        time: 0.0,
+        initialAngle: 0.5,
+        isRunning: false,
+        timer: null,
+        position: CalculatePosition(100, 0.5),
+      )
+    );
+  }
+
+  void setInitialAngle(double value) {
+    emit(state.copyWith(angleInit: value));
+  }
+
+  void setComprimento(double value) {
+    emit(state.copyWith(comprimento: value));
+  }
+
+  void setAceleration(double value) {
+    emit(state.copyWith(aceleracaoGravitacional: value));
+  }
+
+  void setPosition(Offset? positionValue) {
+    if(positionValue != null) {
+      emit(state.copyWith(position: positionValue));
+    }
   }
 
   void accrescentTime(double plus) {
