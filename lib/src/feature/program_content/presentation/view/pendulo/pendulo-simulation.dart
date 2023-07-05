@@ -171,19 +171,6 @@ class PenduloSimulation extends StatelessWidget implements AbstractSimulation {
       )
     );
   }
-
-  // void resset() {
-  //   setState(() {
-  //     angleInit = 0.5;
-  //     angle = angleInit;
-  //     comprimento = 100;
-  //     angularVelocityInit = 0;
-  //     velocityInit = 0;
-  //     time = 0.0;
-  //     aceleracaoGravitacional = 10;
-  //     position = CalculatePosition(comprimento, angle);
-  //   });
-  // }
 }
 
 ButtonStyle getButtonStyle() => ElevatedButton.styleFrom(
