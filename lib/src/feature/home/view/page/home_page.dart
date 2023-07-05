@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:localization/localization.dart';
 
 import '../../../../common/widget/subject-card.dart';
 
@@ -11,6 +10,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: const Text("Àreas de estudo"),
         actions: [
           Container(
@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
                 storage.delete(key: "jwt");
                 Modular.to.navigate("/auth/sign-in");
               },
-              child: const Text('Logout'),
+              child: const Text('Logout', style: TextStyle(color: Colors.deepPurple)),
             ),
           ),
         ],

@@ -131,17 +131,17 @@ class Onboard {
 
 final List<Onboard> demo_data = [
   Onboard(
-      image: "lib/assets/images/onboard/task-forge-logo.png",
+      image: "lib/assets/images/onboard/physics-icon.png",
       title: "onboard_welcome".i18n(),
       description: "onboard_welcome_description".i18n()
   ),
   Onboard(
-      image: "lib/assets/images/onboard/process.png",
+      image: "lib/assets/images/onboard/professor-icon.png",
       title: "onboard_welcome_task_management".i18n(),
       description: "onboard_welcome_task_management_description".i18n()
   ),
   Onboard(
-      image: "lib/assets/images/onboard/blackboard.png",
+      image: "lib/assets/images/onboard/simulation-icon.png",
       title: "onboard_welcome_agile".i18n(),
       description: "onboard_welcome_agile_description".i18n()
   ),
@@ -163,9 +163,11 @@ class OnboardContent extends StatelessWidget {
     return Align(
       alignment: Alignment.center,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           const Spacer(),
-          Image.asset(image, width: 200.0,height: 200.0,),
+          Image.asset(image, width: 300.0,height: 200.0,),
           const Spacer(),
           Text(
             title,

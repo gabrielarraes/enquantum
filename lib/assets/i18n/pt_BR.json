@@ -1,5 +1,5 @@
 {
-  "app_name": "Task Forge",
+  "app_name": "Enquantum",
 
   "send": "Enviar",
   "welcome": "Bem vindo!",
@@ -20,12 +20,12 @@
   "sign_in_welcome": "Bem vindo!",
   "sign_in": "Login",
 
-  "onboard_welcome": "Bem vindo ao TaskForge!",
-  "onboard_welcome_description": "TaskForge foi projetado para otimizar seu processo de gerenciamento de projetos e ajudá-lo a se manter organizado.",
+  "onboard_welcome": "Bem vindo ao Enquantum!",
+  "onboard_welcome_description": "Enquantum fornece explicações claras e didáticas sobre os conceitos de física, utilizando linguagem simples e exemplos práticos para facilitar o entendimento dos alunos.",
 
-  "onboard_welcome_task_management": "Gerenciamento de tarefas",
-  "onboard_welcome_task_management_description": " Crie, atribua e rastreie tarefas sem esforço. Fique por dentro dos prazos e monitore o progresso com facilidade.",
+  "onboard_welcome_task_management": "Fórmulas e equações",
+  "onboard_welcome_task_management_description": "Disponibiliza uma ampla variedade de fórmulas e equações utilizadas na física, acompanhadas de descrições e exemplos de aplicação, permitindo aos alunos acessar facilmente as fórmulas relevantes para cada tópico estudado.",
 
-  "onboard_welcome_agile": "Agile Boards",
-  "onboard_welcome_agile_description": "Visualize seu fluxo de trabalho e simplifique o trabalho de sua equipe usando quadros ágeis personalizáveis. Mova tarefas entre diferentes estágios sem esforço."
+  "onboard_welcome_agile": "Simulações animadas",
+  "onboard_welcome_agile_description": "Apresenta simulações interativas e animadas que permitem aos alunos visualizarem fenômenos físicos de forma prática e realista, auxiliando no entendimento de conceitos abstratos por meio de experiências virtuais."
 }
