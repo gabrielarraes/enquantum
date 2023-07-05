@@ -39,11 +39,11 @@ class HomePage extends StatelessWidget {
                 child: SubjectCard(imgPath: 'lib/assets/images/feature/mechanic.png', text: 'Mecânica',)
               ),
               SizedBox(height: 16.0),
-              SubjectCard(imgPath: 'lib/assets/images/feature/light.png', text: 'Elétrica'),
+              SubjectCard(imgPath: 'lib/assets/images/feature/light.png', text: 'Elétrica                                   EM BREVE'),
               SizedBox(height: 16.0),
-              SubjectCard(imgPath: 'lib/assets/images/feature/termometer.png', text: 'Termodinâmica'),
+              SubjectCard(imgPath: 'lib/assets/images/feature/termometer.png', text: 'Termodinâmica                    EM BREVE'),
               SizedBox(height: 16.0),
-              SubjectCard(imgPath: 'lib/assets/images/feature/optical.png', text: 'Óptica'),
+              SubjectCard(imgPath: 'lib/assets/images/feature/optical.png', text: 'Óptica                                     EM BREVE'),
             ],
           ),
         )

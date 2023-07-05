@@ -134,7 +134,7 @@ class PenduloSimulation extends StatelessWidget implements AbstractSimulation {
                                       mainAxisAlignment: MainAxisAlignment.start,
                                       children: [
                                         Text(
-                                          "Cordenadas: (x: ${state.position.dx}, y: ${state.position.dy})",
+                                          "Cordenadas: (x: ${state.position.dx.toStringAsFixed(3)}, y: ${state.position.dy.toStringAsFixed(3)})",
                                           style: const TextStyle(fontWeight: FontWeight.w600)
                                         ),
                                         const SizedBox(height: 8),
