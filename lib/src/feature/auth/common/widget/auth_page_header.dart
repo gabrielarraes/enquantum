@@ -20,11 +20,11 @@ class AuthPageHeader extends StatelessWidget {
             child: const Icon(Icons.arrow_back, size: 24.0),
           ),
       ),
-      const Center(
+      Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [ 
+          children: const [
             Padding(
               padding: EdgeInsets.only(right: 12.0),
               child: Text("Enquantum", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.black))

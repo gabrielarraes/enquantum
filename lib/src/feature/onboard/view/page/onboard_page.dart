@@ -32,59 +32,64 @@ class _OnboardPageState extends State<OnboardPage> {
     Widget build(BuildContext context) {
       return Scaffold(
         body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              children: [
-                Expanded(
-                  child: PageView.builder(
-                      controller: _pageController,
-                      itemCount: demo_data.length,
-                      onPageChanged: (index) {
-                        setState(() {
-                          _pageIndex = index;
-                        });
-                      },
-                      itemBuilder: (context, index) => OnboardContent(
-                          image: demo_data[index].image,
-                          title:demo_data[index].title,
-                          description: demo_data[index].description
-                      ),
-                  ),
-                ),
-                Row(
-                  children: [
-                    ...List.generate(
-                        demo_data.length,
-                        (index) => Padding(
-                          padding: const EdgeInsets.only(right: 4),
-                          child: DotIndicator(isActive: index == _pageIndex),
-                        )),
-                    const Spacer(),
-                    SizedBox(
-                      height: 60,
-                      width: 60,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          if(_pageController.page == 2.0) {
-                            Modular.to.navigate("/auth/sign-in");
-                          }
-                          _pageController.nextPage(
-                              duration: const Duration(milliseconds: 300),
-                              curve: Curves.ease);
+          child: Container(
+            color: Colors.deepPurple,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: PageView.builder(
+                        controller: _pageController,
+                        itemCount: demo_data.length,
+                        onPageChanged: (index) {
+                          setState(() {
+                            _pageIndex = index;
+                          });
                         },
-                        style:ElevatedButton.styleFrom(
-                          shape: const CircleBorder(),
+                        itemBuilder: (context, index) => OnboardContent(
+                            image: demo_data[index].image,
+                            title:demo_data[index].title,
+                            description: demo_data[index].description
                         ),
-                        child: const Icon(
-                          Icons.arrow_forward,
-                          size: 24.0,
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      ...List.generate(
+                          demo_data.length,
+                          (index) => Padding(
+                            padding: const EdgeInsets.only(right: 4),
+                            child: DotIndicator(isActive: index == _pageIndex),
+                          )),
+                      const Spacer(),
+                      SizedBox(
+                        height: 60,
+                        width: 60,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            if(_pageController.page == 2.0) {
+                              Modular.to.navigate("/auth/sign-in");
+                            }
+                            _pageController.nextPage(
+                                duration: const Duration(milliseconds: 300),
+                                curve: Curves.ease);
+                          },
+                          style:ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            shape: const CircleBorder(),
+                          ),
+                          child: const Icon(
+                            Icons.arrow_forward,
+                            color: Colors.deepPurple,
+                            size: 24.0,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                )
-              ],
+                    ],
+                  )
+                ],
+              ),
             ),
           )
         ),
@@ -107,7 +112,7 @@ class DotIndicator extends StatelessWidget {
       height: isActive ? 12: 4,
       width: 4,
       decoration: BoxDecoration(
-        color: isActive ? Colors.blue : Colors.blue.withOpacity(0.4),
+        color: isActive ? Colors.white : Colors.white.withOpacity(0.4),
         borderRadius: const BorderRadius.all(Radius.circular(12))
       ),
     );
@@ -167,7 +172,8 @@ class OnboardContent extends StatelessWidget {
             textAlign: TextAlign.center,
             style: const TextStyle(
               fontSize: 40.0,
-              fontWeight: FontWeight.w900
+              fontWeight: FontWeight.w900,
+              color: Colors.white
             ),
           ),
           const SizedBox(height: 16),
@@ -176,6 +182,7 @@ class OnboardContent extends StatelessWidget {
             child: Text(
               description,
               textAlign: TextAlign.center,
+              style: const TextStyle(color: Colors.white),
             ),
           ),
           const Spacer()
