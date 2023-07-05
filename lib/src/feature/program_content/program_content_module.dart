@@ -16,14 +16,14 @@ class ProgramContentModule extends Module {
         subjectId: int.parse(args.params['subjectId']),
         content: const CircularMovimentContent(),
         simulation: const CircularMovimentSimulation(),
-        title: 'Movimento Harmônico Simples',
+        title: 'Movimento Circular',
       )
     ),
     ChildRoute("/:subjectId/program-content/pendulo",
       child:(context, args) => ProgramContentWidget(
         subjectId: int.parse(args.params['subjectId']),
         content: const PenduloContent(),
-        simulation: PenduloSimulation(),
+        simulation: const PenduloSimulation(),
         title: 'Movimento Harmônico Simples',
       )
     ),
