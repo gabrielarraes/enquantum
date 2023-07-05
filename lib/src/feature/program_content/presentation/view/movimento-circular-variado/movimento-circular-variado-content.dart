@@ -13,8 +13,8 @@ class MovimentoCircularVariadoContent extends StatelessWidget implements Abstrac
     children: [
         descriptionText(
           "Os movimento variado possuem uma aceleração γ de módulo constate que altera o valor da"
-          "velocidade angular. Esses movimentos podem ser acelerados, onde ocorre um aumento da"
-          "velocidade angular ou retardado onde ocorre uma redução no valor da velocidade angular.", 16
+          " velocidade angular. Esses movimentos podem ser acelerados, onde ocorre um aumento da"
+          " velocidade angular ou retardado onde ocorre uma redução no valor da velocidade angular.", 16
         ),
 
         descriptionText("A aceleração angular é definida por:", null),
@@ -22,7 +22,7 @@ class MovimentoCircularVariadoContent extends StatelessWidget implements Abstrac
 
         descriptionText(
           "A aceleração angular constante faz com que a velocidade angular varia com o tempo segundo uma"
-          "função do primeiro grau, dada por :",
+          " função do primeiro grau, dada por :",
           null
         ),
         const TeXViewDocument(r""" <p>$$ω = { ω_0 + γ * t }$$</p> """),
