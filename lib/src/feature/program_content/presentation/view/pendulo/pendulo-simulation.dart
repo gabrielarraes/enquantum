@@ -147,6 +147,7 @@ class PenduloSimulation extends StatelessWidget implements AbstractSimulation {
                                           "Ângulo: ${state.angleInit.toString()}",
                                           style: const TextStyle(fontWeight: FontWeight.w600)
                                         ),
+                                        const SizedBox(height: 8),
                                         Text(
                                           "Comprimento: ${state.comprimento.toString()}",
                                           style: const TextStyle(fontWeight: FontWeight.w600)
